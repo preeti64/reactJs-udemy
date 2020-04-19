@@ -16,7 +16,6 @@ state =
 
 
 	switchNameHandler = (newName) => {
-	    // console.log("was clicked!!!");
 	    this.setState({
 	        persons: [
 	            { name: newName, age: 28 },
