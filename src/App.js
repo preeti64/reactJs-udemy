@@ -91,11 +91,22 @@ deletePersonHandler = (personIndex) => {
 				 );
 
 				 style.backgroundColor = "red";
-     }
+		 }
+		 //this will give an array of string for the classes as both red and bold
+		 //let stylingClasses = ["red", "bold"].join(" ");
 
+		 const stylingClasses = [];
+		 if (this.state.persons.length <= 1) {
+			 stylingClasses.push("red"); //will push the red class css to the varible
+		 }
+		 if (this.state.persons.length < 1) {
+			 stylingClasses.push("bold");						//will also add bold class css to the variable keeping 																					red class too
+		 }
      return (
 	 <div className="App">
 	 <h1>Hi, I am Preeti React App</h1>
+	 {/* <p className={stylingClasses}>working on dynamic styling</p> */}
+	 { <p className={stylingClasses.join(" ")}>working on dynamic styling</p>/*it is an array so wont wont like this. need to pass a string here */}
 	 <button style={style}
                  onClick={this.togglePersonsHandler}>Click Me to switch</button>
              {persons}
