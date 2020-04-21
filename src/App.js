@@ -60,7 +60,8 @@ deletePersonHandler = (personIndex) => {
 
  render () {
      const style = {
-         backgroundColor: "white",
+				 backgroundColor: "green",
+				 color: "white",
          font: "inherit",
          border: "1px solid blue",
          padding: "8px",
@@ -87,7 +88,9 @@ deletePersonHandler = (personIndex) => {
 				<Person name={this.state.persons[1].name} age={this.state.persons[1].age} click={this.switchNameHandler} changed={this.nameChangedHandler}>Hobbies:Racing</Person>
 				<Person name="Rohit" age="31" /> */}
              </div>
-         );
+				 );
+
+				 style.backgroundColor = "red";
      }
 
      return (
